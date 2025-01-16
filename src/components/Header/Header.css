@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    width: 10rem;
+    height: 3rem;
+}
+
+.header-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    color: white;
+    justify-content: space-between;
+}
+
+.header-menu > li:hover {
+    color: var(--orange);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .header > :nth-child(2) {
+        position: fixed;
+        right: 2rem;
+        z-index: 99;
+        cursor: pointer;
+    }
+
+    .header-menu {
+        flex-direction: column;
+        background-color: var(--appColor);
+        position: absolute;
+        top: 4rem; 
+        right: 1rem;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        gap: 1rem;
+    }
+}
